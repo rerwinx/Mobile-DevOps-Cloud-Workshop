@@ -10,7 +10,7 @@
 7. [Visual Studio Team Services Build](../07_Visual_Studio_Team_Services_Build)
 8. [Visual Studio Team Services Release](../08_Visual_Studio_Team_Services_Release)
 
-# Exercise 1: Visual Studio App Center Apps & Organizations  
+# Exercise 01: Visual Studio App Center Apps & Organizations  
 _Duration: 30 minutes_  
 _Docs: https://docs.microsoft.com/en-us/appcenter/dashboard/creating-and-managing-organizations_  
 _https://docs.microsoft.com/en-us/appcenter/dashboard/creating-and-managing-apps_  
