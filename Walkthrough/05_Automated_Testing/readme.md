@@ -12,7 +12,8 @@
 
 # Exercise 05: Automated Test
 _Duration: 30 minutes_  
-_Docs: https://docs.microsoft.com/en-us/appcenter/_   
+_Docs: https://docs.microsoft.com/en-us/appcenter/_  
+_https://developer.xamarin.com/guides/testcloud/uitest/intro-to-uitest/_
 
 ## Task 1: Create a simple test 
 
@@ -28,7 +29,59 @@ Firstly we need to create an automated test for the app and the first choice is 
 
 For this exercise we will use Xamarin.UITest which is a great choice for Xamarin solutions due to the ease of use and integration with Visual Studio.
 
-**[TODO] Basic Test**
+You can use this simple test to launch the app, login and perform a basic check on the Job Details page.
+Add the test to:
+
+> Mobile/Forms/Test/ContosoFieldService.UITests/Tests.cs
+
+    [Test]
+    public void ViewJobDetails()
+    {
+        //Arrange
+
+        string strFullName = "Mike James";
+        string strEmail = "mike@xamarin.com";
+
+        //Act
+
+        /* Wait for a login element to appear on the screen.
+         * This will also synchronize screenshots.
+         * Using the Marked query targeting the element AutomationID so the
+         * test will mostly work cross platform.
+        */
+        app.WaitForElement(x => x.Marked("tbxFullname"));
+
+        // Taking more screenshots than normal for demo purposes
+        app.Screenshot("App Launched");
+
+        // Enter Username
+        app.EnterText(x => x.Marked("tbxFullname"), strFullName;
+        app.Screenshot("Full Name entered");
+
+        // Enter Email
+        app.EnterText(x => x.Marked("tbxEmail"), strEmail);
+        app.Screenshot("Email Entered");
+
+        // Tap the Login button
+        app.Tap(x => x.Marked("btnLogin"));
+
+        /* Wait for the jobs listo appear.
+        * If no jobs are in the database, the test will throw a timeout exception
+        */
+        AppResult[] jobs = app.WaitForElement(x => x.Marked("lblName"));
+        app.Screenshot("List of available jobs");
+
+        // Tap the first job on the list
+        app.Tap(x => x.Marked("lblName").Index(0));
+        app.WaitForElement(x => x.Marked("btnStartJob"));
+        app.Screenshot("Job Details");
+
+        // Assert
+
+        // Query the job details page and make sure the title is not empty
+        AppResult[] results = app.Query(x => x.Marked("lblDetailsTitle"));
+        Assert.IsNotEmpty(results[0].Text);
+        }
 
 ## Task 2: Create a Device Set
 
@@ -50,8 +103,8 @@ Select the device set you created in Task 2.
 
 Configure your test run with the following settings:
 
-* System Language = English (United Kingdom) 
-* Test Framework = Xamarin.UITest 
+* System Language = English (United Kingdom)
+* Test Framework = Xamarin.UITest
 
 ![Test run - configure](Assets/VSAC_New_Test_Run_Configure.png)
 
@@ -78,5 +131,4 @@ The exact command line will vary but will look something like this:
 
 As your tests completed on each device, you can review the results in **Test – Test Runs**
 
-**[TODO] Test run screenshot**
-
+![View test run results](Assets/VSAC_Test_Run.png)

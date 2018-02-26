@@ -101,6 +101,8 @@ The order of your build should look like this:
 * Copy Files
 * Publish Build Artifacts
 
+Create an App Center Connection.  You will need an [api token](https://docs.microsoft.com/en-us/appcenter/push/pushapi)
+
 Save & Queue the build and switch to App Center Test to view the test results.
 
 ## [Optional] Task 4: Tokenise the build
