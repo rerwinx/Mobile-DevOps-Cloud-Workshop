@@ -38,7 +38,7 @@ Save & Build the DevOps branch.
 
 ## Task 3: Create a Distribution Group 
 
-Now we have a basic build process, we can expand on this to sign and distribute the app.  
+Now we have a basic build process, we can expand on this to sign and distribute the app.
 
 Select the **Distribute** service in the App Center portal and create a new Distribution Group using the **New Group** button on the top right of the portal.
 
@@ -58,3 +58,9 @@ _For iOS you will need the provisioning profile which includes your device (.mob
 * Switch on Distribute build and choose your new distribution group
 
 ![Advanced Build](Assets/VSAC_Build_Advanced.png)
+
+**Save & Build** your updated build definition.
+
+On completion, your signed and packaged app should have been lauched on a cloud device and sent to your Distribution Group.
+
+Review the **Test** and **Distribute** services in the Visual Studio App Center portal.

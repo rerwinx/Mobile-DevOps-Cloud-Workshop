@@ -65,7 +65,7 @@ Save & Queue the build.
 
 In the Visual Studio Navigate to **Build and Release – Library – Secure Files**
 
-**[TODO]**
+Click **+Secure File** and choose the required files to sign the app for your chosen platform (Android:.keystore/iOS:.mobileprovision,.p12) 
 
 ![Remove some build steps](Assets/VSTS_Upload_Secure_File.png)
 
@@ -73,7 +73,7 @@ In the Visual Studio Navigate to **Build and Release – Library – Secure File
 
 Some Tasks can be added by clicking the + button next to Phase 1 but others can be downloaded from the Visual Studio Marketplace
 
-* Mobile App Tasks for iOS and Android: https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.motz-mobile-buildtasks 
+* [Mobile App Tasks for iOS and Android:](https://marketplace.visualstudio.com/items?itemName=vs-publisher-473885.motz-mobile-buildtasks)
 * Download Secure File
 * App Center Test (needs to be enabled)
 
@@ -106,11 +106,26 @@ Save & Queue the build and switch to App Center Test to view the test results.
 ## [Optional] Task 4: Tokenise the build
 
 In this step we will use VSTS build parameters to substitute the App Center App Secret at build time.
+There are many tasks in the marketplace to help with Tokenization
+
+* [Replace Tokens](https://marketplace.visualstudio.com/items?itemName=qetza.replacetokens)
+* [Tokenizer](https://marketplace.visualstudio.com/items?itemName=4tecture.Tokenizer)
+* [Total ALM Tokenization](https://marketplace.visualstudio.com/items?itemName=TotalALM.totalalm-tokenization)
+* [Colin's ALM Corner Build & Release Tools](https://marketplace.visualstudio.com/items?itemName=colinsalmcorner.colinsalmcorner-buildtasks) (Personally, I use this one)
+
+The core concept is described here: [Using VSTS Release with tokenisation to deploy websites](http://blogs.ripple-rock.com/rorystreet/2015/11/25/UsingVSTSReleaseWithTokenisationToDeployWebsites.aspx)
 
 ## Task 5: Create a backend build
 
 * New build definition
-* App Service
-* Add Azure subscription
-* Set build configuration to ReleaseBackend
-* Build
+* Choose Azure Web App
+* Remove the task Azure App Service Deploy - we will deploy through a Release definition
+* Update Process
+    * Agent Queue = Hosted VS2017
+    * Solution to restore packages = ContosoMaintenance.sln
+    * Azure Subscrpition = Associate your Azure subscription details
+* Variables tab
+    * Set build configuration to ReleaseBackend
+* Save & Queue
+
+[Continuous Integration using Visual Studio Team Services](https://almvm.azurewebsites.net/labs/vsts/continuousintegration)

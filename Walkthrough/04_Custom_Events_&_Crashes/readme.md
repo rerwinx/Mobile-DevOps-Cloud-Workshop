@@ -20,7 +20,7 @@ In this exercise you will and some custom events to the app which will track the
 ## Task 1: Add Custom Events to the app
 
 You can add as many events to the app as you like but at a minimum add some to the page models for some of the pages (eg. LoginPageModel.cs).
-Add the Analytics using statement in the page you are targeting. 
+Add the Analytics using statement in the page you are targeting.
 
 using Microsoft.AppCenter.Analytics;
 
@@ -38,15 +38,19 @@ Or can be augmented with additional contextual information
 
 > });
 
-At this stage you can launch your app again and discover Event data being pushed to Visual Studio App Center in the **Analytics – Events** page.
+![Add custom event](Assets/VS_Add_Event.png)
 
-## Task 2: Simulate a Crash 
+At this stage you can launch your app again and discover event data being pushed to Visual Studio App Center in the **Analytics – Events** service.
+
+## Task 2: Simulate a Crash
 
 Crashes and Unhandled Exceptions will occur and will be monitored by Visual Studio App Center.  For this exercise you will use the built in
 
 > AppCenter.Crashes.GenerateTestCrash();
 
 Again, this can be added anywhere in the app to simulate an issue but a good place is in the **JobDetailsPageModel.cs** where you can add it to the **StartJobClicked()** method
+
+![Add Crash](Assets/VS_Add_Crash.png)
 
 ## Task 3: Review the crash information
 

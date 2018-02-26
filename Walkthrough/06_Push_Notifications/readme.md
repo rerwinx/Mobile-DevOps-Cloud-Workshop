@@ -19,8 +19,10 @@ In this exercise you will add the ability to communicate with your users via pus
 ## Task 1: Configure the messaging service
 
 The steps to complete the push notification configuration are different for each platform.
-iOS Apple Push Notifications: https://docs.microsoft.com/en-us/appcenter/sdk/push/ios 
-Android Firebase Cloud Messaging: https://docs.microsoft.com/en-us/appcenter/sdk/push/android 
+
+[iOS Apple Push Notifications](https://docs.microsoft.com/en-us/appcenter/sdk/push/ios)
+
+[Android Firebase Cloud Messaging](https://docs.microsoft.com/en-us/appcenter/sdk/push/android)
 
 ## Task 2: Create a simple Audience 
 
@@ -32,9 +34,23 @@ Save the Audience
 
 ## Task 3: Send a push notification to the Audience
 
-Navigate to **Push – Notifications** and 
+Navigate to **Push – Notifications** and select **Send Notification**
 
-**[TODO]**
+Give the Campaign a name, this will be used to track results, and enter the message you wish to send.
+
+Custom data can be used, for example to change the colour of the notification or to play a sound when the notification is received.
+
+You are presented with three choices
+
+* All registered devices
+* Custom Device List
+* Audience
+
+Choose the Audience you defined in the previous step and click **Next**
+
+Review the notification details and click **Send Notification**
+
+You can now view the success rate of you notification campaign in **Push - Notifications**
 
 ![Create new notification](Assets/VSAC_Push_Notification.png)
 
@@ -42,5 +58,5 @@ Navigate to **Push – Notifications** and
 
 **[TODO]**
 
-https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#use-custom-properties  
-https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#use-custom-properties
+[iOS: Add Custom Event Properties](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/ios#use-custom-properties)  
+[Android: Add Custom Event Properties](https://docs.microsoft.com/en-us/appcenter/sdk/other-apis/android#use-custom-properties)
