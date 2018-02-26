@@ -1,10 +1,19 @@
 ![Banner](Resources/WelcomeBanner.png)
-![AppDesign](Resources/Design%20Board%20Final.png)
 
 # Mobile DevOps Cloud Workshop
 
-Welcome to the Microsoft Mobile Cloud Workshop. We've created this workshop to showcase the speed and ease at which you can leverage Microsoft' cloud platform Azure to build innovative mobile solutions.
+Welcome to the Microsoft Mobile DevOps Cloud Workshop. The workshop aims to educate and inform mobile development teams on the importance of having a streamlined DevOps pipeline and how it can be implemented using the Microsoft toolset.  Visual Studio App Center is at the core of this offering and the practical exercises will take attendees through the process of building, testing, distributing and monitoring a mobile app.    Attendees will also learn how Visual Studio Team Services can be used in conjunction with Visual Studio App Center to include a build and release process for the app backend.
 
+## Workshop Scenario
+
+Contoso Airlines maintenance division provides services to multiple airports. Their employees work across different sites carrying out maintenance tasks and capturing relevant data to report to HQ.  Until recently, reporting was completed using a laborious paper-based system. This process was time-consuming and error prone as captured data was manually transferred to an on-premise database when the worker returned to head office.
+A cross-platform mobile app pilot has recently been completed to help accelerate these manual procedures.  However, there is some scepticism from the business about using mobile devices in their roles with users reluctant to change existing manual processes which have been in place for years.
+
+The first release of the mobile application was well received but to be fully accepted it must be improved and expanded.  If the pilot mobile app is successful then it is likely that there will be an increased demand within the business for more apps as well as an external facing customer app too.
+
+The newly created mobile development team in Contoso Airlines recognise that their existing tooling and processes will not scale to multiple apps and further demand from the business.  They are aware that they need to be able to iterate on the pilot app quickly to deliver additional value to users and have the agility to resolve any issues that might occur quickly.
+
+The mobile team was assembled quickly for the pilot app and simply utilised Visual Studio 2017 as a development environment with GitHub for version control.  The process of packaging, testing and releasing the app is entirely manual which has led to early quality and stability issues on some devices as well as many late nights for the team.  The mobile team is not tied to an existing development toolset like the other internal development teams and they want to ensure that they implement a cost effective and flexible DevOps process that will allow them to integrate with other teams if required.  
 
 ## Guided Walkthrough
 
@@ -29,7 +38,7 @@ You can find a walkthrough guide for the project that outlines how you too can b
 
 ## Author of this guide
 
-|        ![Photo](Resources/richarderwin.jpeg)       |
+|        ![Photo](Resources/richarderwin.png)       |
 |:----------------------------------------------:|
 |                 **Richard Erwin**                 |
 |  [GitHub](https://github.com/rerwinx)  |
